@@ -1,6 +1,6 @@
 
 
-for(let i =10; i >=0; i--){
+/* for(let i =10; i >=0; i--){
     if(i===10){
         console.log( `La Bomba Explotara en:  ${i}`)
     }
@@ -12,7 +12,7 @@ for(let i =10; i >=0; i--){
     }
 }
 
-const respuesta = prompt("Escriba mayor, para saber a partir de que edad es mayor, o menor, en caso contrario")
+/* /* /* /* const respuesta = prompt("Escriba mayor, para saber a partir de que edad es mayor, o menor, en caso contrario")
 
     for(let i=1; i<=100; i++){
         
@@ -26,3 +26,14 @@ const respuesta = prompt("Escriba mayor, para saber a partir de que edad es mayo
             console.log("No Ingreso Nada Coherente")
         }
     }
+ */ 
+const ingresePrecio = prompt("Ingrese el Precio del Producto Seleccionado");
+    const suma = (precioProducto, iva) =>precioProducto+ iva;
+    const resta = (precioProducto, descuento) => precioProducto-descuento;
+        let precioProducto= 1000;
+        let descuento= 125
+        const iva= precioIngresado => precioProducto * 0.21;
+        let nuevoPrecio = resta (suma (precioProducto, iva(precioProducto)), descuento);
+        console.log(nuevoPrecio);
+
+    
