@@ -27,13 +27,13 @@
         }
     }
  */ 
-const ingresePrecio = prompt("Ingrese el Precio del Producto Seleccionado");
+const ingresePrecio =parseInt( prompt("Ingrese el Precio del Producto Seleccionado"));
     const suma = (precioProducto, iva) =>precioProducto+ iva;
     const resta = (precioProducto, descuento) => precioProducto-descuento;
-        let precioProducto= 1000;
+        let precioProducto= ingresePrecio;
         let descuento= 125
         const iva= precioIngresado => precioProducto * 0.21;
         let nuevoPrecio = resta (suma (precioProducto, iva(precioProducto)), descuento);
-        console.log(nuevoPrecio);
+        alert(nuevoPrecio); 
 
     

@@ -1,0 +1,19 @@
+
+
+.grid__tee{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 500px;
+    background-position: center;
+    gap: 10px;
+    
+}
+.gridtee__img{
+    background-image: url("../recursos/tee.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: inherit;
+}
+.gridtee__txt{
+    text-align:start
+}
