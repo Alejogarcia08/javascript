@@ -27,7 +27,7 @@
         }
     }
  */ 
-const ingresePrecio =parseInt( prompt("Ingrese el Precio del Producto Seleccionado"));
+/* const ingresePrecio =parseInt( prompt("Ingrese el Precio del Producto Seleccionado"));
     const suma = (precioProducto, iva) =>precioProducto+ iva;
     const resta = (precioProducto, descuento) => precioProducto-descuento;
         let precioProducto= ingresePrecio;
@@ -35,5 +35,35 @@ const ingresePrecio =parseInt( prompt("Ingrese el Precio del Producto Selecciona
         const iva= precioIngresado => precioProducto * 0.21;
         let nuevoPrecio = resta (suma (precioProducto, iva(precioProducto)), descuento);
         alert(nuevoPrecio); 
+ */
+    console.log(document.forms)
 
-    
+        const formulario = document.querySelector("#formulario")
+        const inputNombre = document.querySelector("#nombre")
+        const inputApellido = document.querySelector("#apellido")
+        const inputEdad = document.querySelector("#edad")
+        const inputEmail = document.querySelector("#email")
+        const inputMensaje = document.querySelector("#mensaje")
+        const submit = document.querySelector("#submit")
+        
+        console.log(formulario, inputNombre, inputApellido, inputEdad, inputEmail, inputMensaje)
+        
+    const clientes = []
+        
+        class Cliente {
+            constructor(nombre, apellido, edad, email, mensaje ){
+                this.nombre = nombre;
+                this.apellido = apellido;
+                this.edad = edad;
+                this.email = email;
+                this.mensaje = mensaje; 
+            }
+        }
+
+        formulario.onsubmit = (event) => {
+            event.preventDefault()
+            console.log(event)
+            clientes.push(new Cliente(inputNombre.value, inputApellido.value, inputEdad.value, inputEmail.value, inputMensaje.value))
+            console.log(clientes)
+        }
+
