@@ -41,17 +41,17 @@
         const formulario = document.querySelector("#formulario")
         const inputNombre = document.querySelector("#nombre")
         const inputApellido = document.querySelector("#apellido")
-        const inputEdad = document.querySelector("#edad")
+        const inputAsunto = document.querySelector("#asunto")
         const inputEmail = document.querySelector("#email")
         const inputMensaje = document.querySelector("#mensaje")
         const submit = document.querySelector("#submit")
         
-        console.log(formulario, inputNombre, inputApellido, inputEdad, inputEmail, inputMensaje)
+        console.log(formulario, inputNombre, inputApellido, inputAsunto, inputEmail, inputMensaje)
         
     const clientes = []
         
         class Cliente {
-            constructor(nombre, apellido, edad, email, mensaje ){
+            constructor(nombre, apellido, asunto, email, mensaje ){
                 this.nombre = nombre;
                 this.apellido = apellido;
                 this.edad = edad;
@@ -63,7 +63,60 @@
         formulario.onsubmit = (event) => {
             event.preventDefault()
             console.log(event)
-            clientes.push(new Cliente(inputNombre.value, inputApellido.value, inputEdad.value, inputEmail.value, inputMensaje.value))
+            clientes.push(new Cliente(inputNombre.value, inputApellido.value, inputAsunto.value, inputEmail.value, inputMensaje.value))
             console.log(clientes)
+
+            formulario.reset()
+        }
+
+        inputNombre.onchange = () => {  
+            console.log(inputNombre.value)
+            if (inputNombre.value.length <= 2){
+                alert("Su Nombre es muy corto")
+                inputNombre.style.border = "4px solid red"
+                submit.disabled = true
+            } else {
+                
+                inputNombre.style.border = "4px solid green"
+                submit.disabled = false
+            }
+        }
+
+        inputApellido.onchange = () => {  
+            console.log(inputApellido.value)
+            if (inputApellido.value.length <= 2){
+                alert("Su apellido es muy corto")
+                inputApellido.style.border = "4px solid red"
+                submit.disabled = true
+            } else {
+                
+                inputApellido.style.border = "4px solid green"
+                submit.disabled = false
+            }
+        }
+
+        inputAsunto.onchange = () => {  
+            console.log(inputAsunto.value)
+            if (inputAsunto.value.length <= 2){
+                
+                inputAsunto.style.border = "4px solid red"
+                submit.disabled = true
+            } else {
+                
+                inputAsunto.style.border = "4px solid green"
+                submit.disabled = false
+            }
+        }
+
+        inputEmail.onchange = () => {  
+            console.log(inputEmail.value)
+            if (inputNombre.value.length <= 2){
+                
+                inputEmail.style.border = "4px solid red"
+                submit.disabled = true
+            } else {
+                inputEmail.style.border = "4px solid green"
+                submit.disabled = false
+            }
         }
 

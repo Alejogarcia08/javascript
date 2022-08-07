@@ -1,24 +1,20 @@
 
-/* productos */
-.grid__tee{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 500px;
-    background-position: center;
-    gap: 10px;
-    
-}
-.gridtee__img{
-    background-image: url("../recursos/tee.jpeg");
+/* nosotros*/
+.img{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.438)), url("../recursos/nosotros.jpg");
+    background-attachment: fixed;
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-    background-position: inherit;
-}
-.gridtee__txt{
-    text-align:start
-}
+    height: 60rem;
+    justify-content: center;
+    align-items: center; }
 
 
+
+/* contacto */
 
 #formulario {
     width: 300px;
@@ -30,4 +26,356 @@
     padding: 15px;
     border: 1px solid black;
     border-radius: 10px;
+}
+
+/* shop */
+
+#productos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr;
+    background-position: center;
+    gap: 0px;
+    margin-left: 175px;
+}
+
+
+
+.inicio {
+    background-color: whitesmoke;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 30px;
+    letter-spacing: 5px;
+    color: black;
+
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#productos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 2em;
+    column-gap: 1em;
+    margin-left: 4em;
+    margin-top: 1em;
+}
+
+.filtro {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
+.filtro a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    text-decoration: none;
+    color: black;
+    padding-left: 2em;
+
+}
+
+.filtro a:hover {
+    transform: scale(0.9);
+}
+
+.filtro button {
+    border-style: none;
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 1em;
+}
+
+.filtro button:hover {
+    border-bottom: 1px grey solid;
+}
+
+.producto {
+    width: 17em;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.producto img {
+    width: 80%;
+    height: auto;
+}
+
+.agregar {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    padding: 0.4em 1em 0.4em 1em;
+    background-color: rgb(1, 155, 1);
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+
+.agregar:hover {
+    transform: scale(0.98);
+}
+
+#carritoSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 2em;
+    margin-left: 18em;
+    border-top: 2px black solid;
+    width: 60%;
+}
+
+#carritoSection .tituloCarrito {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 25px;
+    color: black;
+    letter-spacing: 3px;
+}
+
+#vaciar {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    padding: 0.4em 1em 0.4em 1em;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#vaciar:hover {
+    transform: scale(0.98);
+}
+
+#carritoSection h2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 17px;
+    color: black;
+}
+
+#carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.productoCarrito {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 7em;
+    align-items: center;
+}
+
+.productoCarrito img {
+    width: 8em;
+    height: auto;
+}
+
+.botonBorrar {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    padding: 0.4em 1em 0.4em 1em;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.botonBorrar:hover {
+    background-color: black;
+    color: white;
+}
+
+.total {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 20px;
+    color: black;
+}
+
+.terminarCompra {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    padding: 0.4em 1em 0.4em 1em;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.terminarCompra:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+.detalleProd {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.detalleProd button {
+    width: 2em;
+    height: 2em;
+}
+
+.detalleProd img {
+    width: 6em;
+    height: auto;
+}
+
+.seguir {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    padding: 0.4em 1em 0.4em 1em;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px black solid;
+    color: black;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.seguir:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.checkout {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10em;
+    margin-top: 3em;
+    /* justify-content: space-around; */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 50%;
+    
+}
+
+#detalle {
+    width: 50%;
+}
+
+#detalle h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+#detalle h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+ #form{
+    width: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    gap: 2em;
+ }
+
+ #form input{
+    border-style: none;
+    border-bottom: 1px black solid;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    padding: 0.2em;
+    color: black;
+ }
+
+ #form #submit{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    padding: 0.4em 1em 0.4em 1em;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px black solid;
+    color: black;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+#form #submit:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.comprar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#confirmacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
