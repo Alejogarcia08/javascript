@@ -8,7 +8,7 @@ function mostrarProductos(array){
         <div class="producto">
         <img src=${producto.img}>
         <p>${producto.name} $${producto.price}<p>
-        <button class="agregar" id=${producto.id}">Agregar al carrito</button>
+        <button class="agregar" id=${producto.id}>Agregar al carrito</button>
         </div>`
         
     });
@@ -46,7 +46,7 @@ function mostrarCarrito() {
     carrito.forEach(producto => {
         divCarrito.innerHTML += `
             <div class="productoCarrito">
-                <img src=${producto.img}>
+                <img src=${producto.img}> 
                 <h2>${producto.name}   $${producto.price}</h2>
                 <button class="botonBorrar" id="${producto.id}">X</button>
             </div>
@@ -59,7 +59,7 @@ function mostrarCarrito() {
     divCarrito.append(totalCompra)
 
     let botonBorrar = document.getElementsByClassName("botonBorrar")
-    console.log(botonBorrar)
+   /*  console.log(botonBorrar) */
 
     for (botonX of botonBorrar) {
         botonX.addEventListener("click", eliminarProducto)
