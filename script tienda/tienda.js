@@ -6,14 +6,14 @@ function mostrarProductos(array){
     array.forEach(producto => {
         productosDiv.innerHTML +=`
         <div class="producto">
-        <img src=${producto.img}>
+        <img src=${producto.img} alt="">
         <p>${producto.name} $${producto.price}<p>
         <button class="agregar" id=${producto.id}>Agregar al carrito</button>
         </div>`
         
     });
 }
-mostrarProductos(products)
+mostrarProductos(products) /* con esto lo muestro en pantalla */
 
 /* AGREGAR AL CARRITO */
 let botonAgregar=document.getElementsByClassName("agregar")
@@ -27,11 +27,17 @@ function agregarAlCarrito(event){
     const idBoton=boton.getAttribute("id");
     let productoSeleccionado=products.find(producto=>producto.id===idBoton)
     carrito.push(productoSeleccionado)
-    
+
     /* storage */
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
-    alert("Agregaste" + productoSeleccionado.name + "al carrito")
+    
+    swal({
+        title: "Genial!",
+        text: "Agregaste " + productoSeleccionado.name + " al carrito!",
+        icon: "success",
+        button: "OK",
+        });
     mostrarCarrito()
 
 }
@@ -43,27 +49,27 @@ for(boton of botonAgregar){
 
 //MOSTRAR CARRITO
 function mostrarCarrito() {
-    carrito.forEach(producto => {
+    carrito.forEach (producto => {
         divCarrito.innerHTML += `
             <div class="productoCarrito">
-                <img src=${producto.img}> 
+                <img src=${producto.img} alt=""> 
                 <h2>${producto.name}   $${producto.price}</h2>
                 <button class="botonBorrar" id="${producto.id}">X</button>
-            </div>
-            `
-    })
+            </div>`})
+
+    /* suma */
     let total = carrito.reduce((acc, curr) => acc + parseInt(curr.price), 0)
     let totalCompra = document.createElement("p")
     totalCompra.setAttribute("class", "total")
     totalCompra.innerText = ("Total: " + total)
     divCarrito.append(totalCompra)
 
-    let botonBorrar = document.getElementsByClassName("botonBorrar")
-   /*  console.log(botonBorrar) */
+    let botonBorrar = document.getElementsByClassName("botonBorrar")  
 
-    for (botonX of botonBorrar) {
+
+for (botonX of botonBorrar) {
         botonX.addEventListener("click", eliminarProducto)
-    }
+    } 
 
     //vaciar carrito
     vaciar.addEventListener("click", () => {
@@ -71,6 +77,7 @@ function mostrarCarrito() {
         localStorage.clear()
         divCarrito.innerHTML = ""
     })
+/* finalizar compra */
 
     let terminarCompra = document.createElement("button")
     terminarCompra.setAttribute("class", "terminarCompra")

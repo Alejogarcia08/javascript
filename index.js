@@ -54,7 +54,7 @@
             constructor(nombre, apellido, asunto, email, mensaje ){
                 this.nombre = nombre;
                 this.apellido = apellido;
-                this.edad = edad;
+                this.asunto = asunto;
                 this.email = email;
                 this.mensaje = mensaje; 
             }
@@ -75,6 +75,7 @@
                 alert("Su Nombre es muy corto")
                 inputNombre.style.border = "4px solid red"
                 submit.disabled = true
+                
             } else {
                 
                 inputNombre.style.border = "4px solid green"
@@ -110,7 +111,7 @@
 
         inputEmail.onchange = () => {  
             console.log(inputEmail.value)
-            if (inputNombre.value.length <= 2){
+            if (inputEmail.value.length <= 2){
                 
                 inputEmail.style.border = "4px solid red"
                 submit.disabled = true
