@@ -109,6 +109,7 @@
             }
         }
 
+        
         inputEmail.onchange = () => {  
             console.log(inputEmail.value)
             if (inputEmail.value.length <= 2){
@@ -120,4 +121,3 @@
                 submit.disabled = false
             }
         }
-

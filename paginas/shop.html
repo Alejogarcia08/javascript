@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
     <title>Tienda</title>
     <script defer src="../script tienda/productos.js"></script>
         <script defer src="../script tienda/tienda.js"></script>
@@ -13,7 +14,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-light bg-light">
+        <nav class="navbar navbar-light bg-light shadow-lg p-3 mb-4 bg-body rounded fs-4">
             <div class="container-fluid">
             <a class="navbar-brand" href="../index.html">
                 <img src="../recursos/logo sani.jpg" alt="" width="55" height="55" class="d-inline-block align-text-center">
@@ -21,17 +22,15 @@
             </a>
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    <a class="nav-link" aria-current="page" href="../index.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./contacto.html">Contacto</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="shop.html">Tienda</a>
+                    <a class="nav-link active" href="shop.html">Tienda</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
+                
                 
             
             </ul>
@@ -45,14 +44,10 @@
         <div id="productos">
 
         </div>
-    </section>
-    <section id="carritoSection">
-        <div>
-            <h2 class="tituloCarrito">
-                Carrito
-            </h2>
-            <button id="vaciar">Vaciar carrito</button>
-        </div>
+        <section id="carritoSection">
+        </section>
+        
+            
         <div id="carrito">
 
         </div>

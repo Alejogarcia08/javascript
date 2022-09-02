@@ -19,5 +19,26 @@ const products=[
         name:"Union Normal",
         price:" 770",
         img:"http://grupodema.com.ar/uploads/documents/01332252c26b3d67f2856abc672e0e675af7d284.jpeg"
+    },
+    {
+        id:"4",
+        category:"aquaSistem",
+        name:"Sobre Paso Fusion",
+        price:" 1200",
+        img:"http://grupodema.com.ar/uploads/documents/9ac49f3b163870d68031f962d3fa48f40c18e1f9.jpeg"
+    },
+    {
+        id:"5",
+        category:"aquaSistem",
+        name:"Valvula Esferica",
+        price:" 2300",
+        img:"http://grupodema.com.ar/uploads/documents/f92a196824f68560071bf5f4183fbc95b1d43ea9.jpeg"
+    },
+    {
+        id:"5",
+        category:"aquaSistem",
+        name:"Caño PN20",
+        price:" 2000",
+        img:"http://grupodema.com.ar/uploads/documents/9370304b0463422743ab5e603cbaa60e82c8ca46.jpeg"
     }
 ]

@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@400;600&family=Oswald:wght@300;400;600&display=swap');
 
 /* nosotros*/
-.img{
+body {
+    font-family: 'Akshar', sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+
+.img {
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.438)), url("../recursos/nosotros.jpg");
@@ -10,9 +16,31 @@
     background-size: cover;
     height: 60rem;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+}
+
+.txt__carrito {
+    display: flex;
+    font-family: Oswald, sans-serif;
+    color: white;
+    font-size: 70px;
+
+}
+
+.txt_img {
+    display: flex;
+    font-size: 30px;
+    font-family: Oswald, sans-serif;
+    color: aliceblue;
+    text-align: center;
+    margin: 100px;
+}
 
 
+nav {
+    font-family: Oswald, sans-serif;
+
+}
 
 /* contacto */
 
@@ -30,9 +58,9 @@
 
 /* shop */
 
-#productos{
+#productos {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr, 1fr, 1fr;
     grid-template-rows: 1fr;
     background-position: center;
     gap: 0px;
@@ -47,7 +75,7 @@
 
 h1 {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     font-weight: lighter;
     font-size: 30px;
@@ -80,7 +108,7 @@ h1 {
 }
 
 .filtro a {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     font-weight: lighter;
     text-decoration: none;
@@ -96,7 +124,7 @@ h1 {
 .filtro button {
     border-style: none;
     background-color: transparent;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     font-weight: lighter;
     text-decoration: none;
@@ -113,7 +141,7 @@ h1 {
 .producto {
     width: 17em;
     height: auto;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     font-weight: lighter;
     display: flex;
@@ -127,22 +155,21 @@ h1 {
 }
 
 .agregar {
-    /*   font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
+    font-family: Oswald, sans-serif;
     font-weight: lighter;
     padding: 0.4em 1em 0.4em 1em;
     background-color: rgb(1, 155, 1);
     cursor: pointer;
-    border-radius: 10px; */
-    background-color: #4CAF50; /* Green */
+    border-radius: 10px;
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    
+    font-size: 20px;
+
 }
 
 .agregar:hover {
@@ -153,16 +180,14 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     margin-top: 2em;
     margin-left: 18em;
-    border-top: 2px black solid;
     width: 60%;
 }
 
 #carritoSection .tituloCarrito {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     font-weight: lighter;
     font-size: 25px;
@@ -171,22 +196,82 @@ h1 {
 }
 
 #vaciar {
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    font-weight: lighter;
-    padding: 0.4em 1em 0.4em 1em;
-    background-color: transparent;
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #000000;
     cursor: pointer;
-    border-radius: 10px;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: Oswald, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform, opacity;
+    z-index: 0;
+    margin-left: 19em;
+    margin-bottom: 1em;
 }
 
 #vaciar:hover {
-    transform: scale(0.98);
+    background: #F6F9FE;
+    color: #174ea6;
 }
+
+#vaciar:active {
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+}
+
+#vaciar:focus {
+    outline: none;
+    border: 2px solid #4285f4;
+}
+
+#vaciar:not(:disabled) {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+#vaciar:not(:disabled):hover {
+    box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+#vaciar:not(:disabled):focus {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+#vaciar:not(:disabled):active {
+    box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+#vaciar:disabled {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+
+
 
 #carritoSection h2 {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     font-weight: lighter;
     font-size: 17px;
@@ -212,60 +297,114 @@ h1 {
     height: auto;
 }
 
+
 .botonBorrar {
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    font-weight: lighter;
-    padding: 0.4em 1em 0.4em 1em;
-    background-color: transparent;
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #000000;
     cursor: pointer;
-    border-radius: 10px;
+    display: inline-flex;
+    fill: currentcolor;
+
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform, opacity;
+    z-index: 0;
 }
 
 .botonBorrar:hover {
-    background-color: black;
-    color: white;
+    background: #F6F9FE;
+    color: #a61717;
+}
+
+.botonBorrar:active {
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+}
+
+.botonBorrar:focus {
+    outline: none;
+    border: 2px solid #4285f4;
+}
+
+.botonBorrar:not(:disabled) {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.botonBorrar:not(:disabled):hover {
+    box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.botonBorrar:not(:disabled):focus {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.botonBorrar:not(:disabled):active {
+    box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.botonBorrar:disabled {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
 
 .total {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     font-weight: lighter;
     font-size: 20px;
     color: black;
-}
-
-.terminarCompra {
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    font-weight: lighter;
-    padding: 0.4em 1em 0.4em 1em;
-    background-color: transparent;
-    cursor: pointer;
-    border-radius: 10px;
-}
-
-.terminarCompra:hover {
-    background-color: black;
-    color: white;
+    margin-left: 8em;
 }
 
 
+
+.gridCarrito {
+    display: flex;
+    flex-direction: row;
+
+}
 
 .detalleProd {
     display: flex;
     flex-direction: row;
     gap: 4em;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
-    font-weight: lighter;
+
+    /* font-weight: lighter; */
+    margin-left: 7em;
 }
 
 .detalleProd button {
+    display: flex;
+    flex-direction: inherit;
+    align-content: center;
+    align-items: center;
     width: 2em;
     height: 2em;
+
 }
 
 .detalleProd img {
@@ -273,92 +412,178 @@ h1 {
     height: auto;
 }
 
+
 .seguir {
-    font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
-    font-weight: lighter;
-    padding: 0.4em 1em 0.4em 1em;
-    background-color: transparent;
-    cursor: pointer;
-    border: 1px black solid;
-    color: black;
-    border-radius: 10px;
+    margin-left: 45%;
     text-decoration: none;
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: Oswald, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform, opacity;
+    z-index: 0;
 }
 
 .seguir:hover {
-    background-color: black;
-    color: white;
+    background: #F6F9FE;
+    color: #174ea6;
+}
+
+.seguir:active {
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+}
+
+.seguir:focus {
+    outline: none;
+    border: 2px solid #4285f4;
+}
+
+.seguir:not(:disabled) {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.seguir:not(:disabled):hover {
+    box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.seguir:not(:disabled):focus {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.seguir:not(:disabled):active {
+    box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.seguir:disabled {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
 
 
 .checkout {
-    width: 90%;
+    width: 20%;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    display: inline-block;
+    width: 60%;
     gap: 10em;
     margin-top: 3em;
-    /* justify-content: space-around; */
+
 }
 
 /* form {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    width: 50%;
-    
+    width: 100%;
+
 } */
 
 #detalle {
     width: 50%;
+    gap: 10px;
+
 }
 
-#detalle h2 {
-    font-family: Arial, Helvetica, sans-serif;
+.detalleCompra h2 {
+    display: flex;
+    align-items: center;
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     font-weight: lighter;
-    text-align: center;
+    text-align: left;
+    margin-left: 6em;
     letter-spacing: 2px;
+
 }
 
 #detalle h3 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     font-weight: lighter;
     text-align: center;
     letter-spacing: 2px;
+    margin-left: 7em;
+    margin-top: 2em;
 }
 
-/* .formulario {
+
+.contenedorFormulario {
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    margin-top: 3em;
+    font-family: Oswald, sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.formulario {
+    font-family: Oswald, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     font-weight: lighter;
 }
- #form{
-    width: 90%;
-    font-family: Arial, Helvetica, sans-serif;
+
+.formulario h2 {
+    font-family: Oswald, sans-serif;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 100%;
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     font-weight: lighter;
-    gap: 2em;
- }
 
- #form input{
+}
+
+#form input {
     border-style: none;
     border-bottom: 1px black solid;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     padding: 0.2em;
     color: black;
- }
+    width: 100%;
+}
 
- #form #submit{
-    font-family: Arial, Helvetica, sans-serif;
+/* #form #submit {
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     font-weight: lighter;
     padding: 0.4em 1em 0.4em 1em;
@@ -368,22 +593,101 @@ h1 {
     color: black;
     border-radius: 10px;
     text-decoration: none;
+    width: 100%;
 }
 
 #form #submit:hover {
-    background-color: black;
+    background-color: #4CAF50;
     color: white;
 } */
 
 
-.comprar {
-    display: flex;
-    flex-direction: column;
+
+#form #submit {
+    text-transform: uppercase;
     align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-size: 16px;
+    font-weight: 500;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform, opacity;
+    z-index: 0;
 }
 
-#confirmacion{
+#form #submit:hover {
+    background: #4CAF50;
+    color: #ffffff;
+}
+
+#form #submit:active {
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+}
+
+#form #submit:focus {
+    outline: none;
+    border: 2px solid #4CAF50;
+}
+
+#form #submit:not(:disabled) {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+#form #submit:not(:disabled):hover {
+    box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+#form #submit:not(:disabled):focus {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+#form #submit:not(:disabled):active {
+    box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+#form #submit:disabled {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+
+
+/* #confirmacion {
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 3em;
+    font-family: Oswald, sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+} */
+
+#confirmacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Oswald, sans-serif;
 }
