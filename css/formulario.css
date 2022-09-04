@@ -70,7 +70,7 @@ p:before {
     color: #5a5a5a;
 }
 
-.enviar {
+#submit {
     float: right;
     font-family: Oswald, sans-serif;
     align-items: center;
@@ -141,6 +141,7 @@ p:before {
 }
 
 .datos {
+
     content: 'Hi';
     position: absolute;
     bottom: -15px;
@@ -152,8 +153,11 @@ p:before {
     border-radius: 6px;
     font-size: 13px;
     box-shadow: 10px 10px 40px -14px #000;
+    
 }
 
 span {
+    
     margin: 0 5px 0 15px;
+    
 }
